@@ -7,7 +7,7 @@
 ```bash
 # 没有安装 san-cli 需要安装
 npm i -g san-cli
-san init jinzhan/san-cli-plugin-template san-cli-plugin-`PLUGIN_NAME`
+san init jinzhan/san-cli-plugin-template san-cli-plugin-YOUR_PLUGIN_NAME
 ```
 
 **PS: san-cli node 版本需要>=8.16**
