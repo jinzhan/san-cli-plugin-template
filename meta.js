@@ -22,15 +22,9 @@ Start with ${chalk.bold('yarn/npm start')}`,
     },
     filters: {
         '_eslintrc.js': '!lint',
-        'mock/**': 'tplEngine!=="smarty"',
-        'template/**': 'tplEngine!=="smarty"',
-        'template/demo-store/**': '!demo || (demo && demoType!=="store")',
-        'template/demo/**': '!demo || (demo && demoType!=="normal")',
-        'src/pages/index/**/*.less': 'cssPreprocessor!=="less"',
-        'src/pages/index/**/*.scss': 'cssPreprocessor!=="sass"',
-        'src/pages/index/**/*.styl': 'cssPreprocessor!=="stylus"',
-        'src/pages/demo-store/**': '!demo || (demo && demoType!=="store")',
-        'src/pages/demo/**': '!demo || (demo && demoType!=="normal")'
+        'src/components/demo/*.less': 'cssPreprocessor!=="less"',
+        'src/components/demo/*.scss': 'cssPreprocessor!=="sass"',
+        'src/components/demo/*.styl': 'cssPreprocessor!=="stylus"'
     },
     prompts: {
         name: {
@@ -49,22 +43,6 @@ Start with ${chalk.bold('yarn/npm start')}`,
             type: 'string',
             label: '作者',
             default: '{{author}}'
-        },
-        tplEngine: {
-            type: 'list',
-            message: '选择模板引擎',
-            choices: [
-                {
-                    name: 'Smarty（百度内部）',
-                    value: 'smarty',
-                    short: 'Smarty'
-                },
-                {
-                    name: '纯 HTML',
-                    value: 'html',
-                    short: 'HTML'
-                }
-            ]
         },
         lint: {
             type: 'confirm',
