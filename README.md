@@ -25,7 +25,7 @@ san init jinzhan/san-cli-plugin-template san-cli-plugin-YOUR_PLUGIN_NAME
 node代码
 
 - lib: webpack插件的目录
-- index.js: San CLI插件主文件，通常是对webpack插件的封装
+- index.js: San CLI插件主文件，通常是对webpack插件的包装
 - ui.js: San CLI UI插件主文件
 
 
