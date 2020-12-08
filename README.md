@@ -1,0 +1,1 @@
+# san.addon.config
