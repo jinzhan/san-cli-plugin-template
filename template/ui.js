@@ -8,24 +8,17 @@ const debug = getDebugLogger('ui:third-plugin-dashboard');
 module.exports = api => {
     // 加了一个san.cli的命名空间
     const sharedData = api.getSharedData('san.cli.');
-    const ipc = api.getIpc();
 
     if (process.env.SAN_CLI_UI_DEV) {
         api.registerAddon({
-            id: 'san.san-cli.client-addon.dev',
+            id: 'san.san-cli.{{name}}.dev',
             url: 'http://localhost:8955/index.js'
         });
     }
     else {
         api.registerAddon({
-            id: 'san.san-cli.client-addon',
+            id: 'san.san-cli.{{name}}',
             path: 'san-cli-plugin-dashboard/dist'
         });
     }
-
-    ipc.on(({data}) => {
-        if (data.sanCliServe) {
-            sharedData.set('serve-url', data.sanCliServe.url);
-        }
-    });
 };

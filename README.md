@@ -33,7 +33,6 @@ node代码
 
 模板中的`_xxx`文件会在安装之后，转换成`.xxx`文件，例如`template/_babelrc`经过`hulk init`之后，会变成`.babelrc`。
 
--   ezcoderc：同步开发机配置，yaml 格式，**未来支持**
 -   babelrc：babel 配置
 -   editorconfig：不需要修改，设置了 tab 4 个空格等，常见规范类的配置
 -   npmrc：不需要修改，注册@baidu registry
