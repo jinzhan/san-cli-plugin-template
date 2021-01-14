@@ -3,7 +3,7 @@ const fs = require('fs-extra');
 const {getDebugLogger} = require('san-cli-utils/ttyLogger');
 const {processStats} = require('./lib/stats');
 
-const debug = getDebugLogger('ui:third-plugin-dashboard');
+const debug = getDebugLogger('ui:third-plugin-{{name}}');
 
 module.exports = api => {
     // 加了一个san.cli的命名空间
