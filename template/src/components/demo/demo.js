@@ -17,7 +17,7 @@ export default class App extends SanComponent {
 
     static template = `
     <div class="main">
-        <h1>Hello, {{title}}</h1>
+        <h1>Hello, \{{title}}</h1>
     </div>
     `;
 
